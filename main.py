@@ -1,30 +1,28 @@
-class Human:
-    def __init__(self, name):
-        self.name = name
-        self.age = 0
-        self.weight = 0
-        self.height = 0
-    def live(self):
-        print(self.name,' is living')
+try:
+    name = int(input('name: '))
+    a = int(input('A: '))
+    sign = input('Sign: ')
+    b = int(input('B: '))
+    if sign == '/' and b == 0:
+        raise ZeroDivisionError
+    if sign != '+' and sign != '-' and sign!='*' and sign!='/':
+        raise Warning
+    elif sign == '+':
+        print(f"{a} + {b} = {a+b}")
+    elif sign == '*':
+        print(f"{a} * {b} = {a*b}")
+    elif sign == '-':
+        print(f"{a} - {b} = {a-b}")
+except ValueError:
+    print('You need to input digits!')
+except ZeroDivisionError:
+    print('Go to school')
+except Warning:
+    print('Unknown sign')
+except:
+    print('Error!')
 
-class Teacher(Human):
-    def __init__(self, name):
-      super().__init__(name)
-      self.beauty = 0
-      self.kindness = 0
-    def learn(self):
-        print(self.name,' is learning')
-    def scream(self):
-        print(self.name,' is screaming')
-
-class Student(Human):
-    def __init__(self, name):
-      super().__init__(name)
-      self.laziness = 0
-      self.generosity = 0
-    def studies(self):
-        print(self.name,' is studying')
-    def dohomework(self):
-        print(self.name,' is doing homework')
-      
-      
+def calculator():
+    print('calculator')
+def count():
+    print('count')
