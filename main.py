@@ -1,28 +1,32 @@
-try:
-    name = int(input('name: '))
-    a = int(input('A: '))
-    sign = input('Sign: ')
-    b = int(input('B: '))
-    if sign == '/' and b == 0:
-        raise ZeroDivisionError
-    if sign != '+' and sign != '-' and sign!='*' and sign!='/':
-        raise Warning
-    elif sign == '+':
-        print(f"{a} + {b} = {a+b}")
-    elif sign == '*':
-        print(f"{a} * {b} = {a*b}")
-    elif sign == '-':
-        print(f"{a} - {b} = {a-b}")
-except ValueError:
-    print('You need to input digits!')
-except ZeroDivisionError:
-    print('Go to school')
-except Warning:
-    print('Unknown sign')
-except:
-    print('Error!')
+class Human:
+    def __init__(self, name):
+        self.name = name
+        self.age = 0
+        self.weight = 0
+        self.height = 0 
+    def live(self):
+        print(self.name,' is living')
+    def fight(self):
+        print(self.name,' is fighting')
+  
+class Hero(Human):
+    def __init__(self, name):
+      super().__init__(name)
+      self.strong = 0
+      self.smart = 0
+      self.kindness = 0
+    def win(self):
+        print(self.name,' is winning')
+    def savetheworld(self):
+        print(self.name,' is saveingtheworld')
 
-def calculator():
-    print('calculator')
-def count():
-    print('count')
+class Enemy(Human):
+    def __init__(self, name):
+      super().__init__(name)
+      self.cunning = 0
+      self.evil = 0 
+      self.madness = 0
+    def lose(self):
+        print(self.name,' is lost')
+    def violate(self):
+        print(self.name,' is violating')
