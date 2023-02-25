@@ -29,4 +29,4 @@ class Enemy(Human):
     def lose(self):
         print(self.name,' is lost')
     def violate(self):
-        print(self.name,' is violating')
+        print(self.name,' is violating') 
